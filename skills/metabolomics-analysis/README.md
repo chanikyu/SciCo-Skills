@@ -11,6 +11,10 @@ LC-MS and GC-MS**. Same design as the other SciCo skills; figures reuse
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/metabolomics-workflow.png" width="92%" alt="metabolomics-analysis pipeline: raw LC-MS / GC-MS → feature detection → feature QC → annotation → output"/>
+</p>
+
 ```
 raw (mzML/.CDF) ┬─ LC-MS ── feature detection (asari [Python] / XCMS) → RT alignment → gap-fill → isotope/adduct
                 └─ GC-MS ── deconvolution (eRah / MS-DIAL) → retention index (RIAssigner) → EI matching

@@ -9,6 +9,10 @@ user-provided databases, structured output + logs.
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/genome-workflow.png" width="92%" alt="genome-analysis pipeline: FASTQ → read QC → assembly → assembly QC, annotation and species identification → output"/>
+</p>
+
 ```
 raw FASTQ ─(fastp QC)→ trimmed ─(assembler)→ contigs.fasta
   assembler — Illumina: SPAdes / Unicycler / Shovill / SKESA · long: Flye / Canu / Raven · hybrid: Unicycler(+long)

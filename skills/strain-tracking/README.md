@@ -11,6 +11,10 @@ Same design as the other SciCo skills; reuses [shotgun-analysis](../shotgun-anal
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/strain-tracking-workflow.png" width="92%" alt="strain-tracking pipeline: QC'd reads → strain profiling → same-strain calls → strain-sharing network and persistence → output"/>
+</p>
+
 ```
 QC'd reads (many samples) ─(profile: StrainPhlAn 4 [marker, default] · inStrain [popANI, ref/MAG])→
    per-species SNV/marker consensus ─(cross-sample compare)→ per-species strain DISTANCE / identity matrix

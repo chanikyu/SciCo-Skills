@@ -10,6 +10,10 @@ output + logs. Figures reuse [scientific-data-viz](../scientific-data-viz).
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/microbiome-metabolome-workflow.png" width="92%" alt="microbiome-metabolome-analysis pipeline: annotated feature table → clean → normalize, transform, scale → univariate + multivariate statistics → output"/>
+</p>
+
 ```
 annotated table ─(clean: drop >50% missing → half-min impute → prevalence/variance filter, group-blind)→
    ─(normalize: PQN)→ ─(transform: log)→ ─(scale: Pareto)→

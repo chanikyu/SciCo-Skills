@@ -11,6 +11,10 @@ reuses the [amplicon-analysis](../amplicon-analysis) core; figures reuse
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/metatranscriptome-workflow.png" width="92%" alt="metatranscriptome-analysis pipeline: FASTQ → QC, host and rRNA removal → function / taxonomy profiling → community analysis → output"/>
+</p>
+
 ```
 raw FASTQ ─(fastp QC + host removal[opt])→ ─(rRNA removal: SortMeRNA)→ non-rRNA mRNA
 mRNA ┬─(HUMAnN)→ pathway / gene-family abundance (function expression)

@@ -12,6 +12,10 @@ on the per-omic skills ([shotgun-analysis](../shotgun-analysis),
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/microbiome-multiomics-workflow.png" width="92%" alt="microbiome-multiomics-analysis pipeline: paired omic tables → align + transform → per-omic footprint, cross-omic correlation, concordance → output"/>
+</p>
+
 ```
 {omic tables} + metadata ─(align samples; report drops)→ per omic ─(CLR [compositional] · log+scale [metabolome])→
  per omic ── PERMANOVA (Aitchison) + dispersion check → condition footprint (R², p) per layer

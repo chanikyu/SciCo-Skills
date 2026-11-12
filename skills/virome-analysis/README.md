@@ -11,6 +11,10 @@ builds on [shotgun-analysis](../shotgun-analysis) (assembly).
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/virome-workflow.png" width="92%" alt="virome-analysis pipeline: contigs → viral identification + QC (geNomad, CheckV, dereplication) → vOTU abundance → community analysis → output"/>
+</p>
+
 ```
 contigs (≥1.5 kb) ─(geNomad: viral identification)→ ─(CheckV: QC + provirus excision, keep Medium+)→
    ─(dereplicate: 95% ANI / 85% AF, MIUViG)→ vOTUs ─(map reads: CoverM, breadth ≥75%)→ vOTU × samples abundance

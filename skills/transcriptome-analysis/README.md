@@ -9,6 +9,10 @@ Python); figures reuse [scientific-data-viz](../scientific-data-viz).
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/transcriptome-workflow.png" width="92%" alt="transcriptome-analysis pipeline: FASTQ → QC + quantification → gene count matrix → differential expression + enrichment → output"/>
+</p>
+
 ```
 raw FASTQ ─(fastp QC)→ ─(quantify, --aligner salmon | kallisto | star)→ gene × samples counts
 counts + metadata ─(pydeseq2: size factors → dispersion → Wald → BH-FDR)→ DE genes ─(enrichment)→

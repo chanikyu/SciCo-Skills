@@ -12,6 +12,10 @@ reuses [shotgun-analysis](../shotgun-analysis) QC.
 
 ## Pipeline
 
+<p align="center">
+<img src="../../assets/resistome-workflow.png" width="92%" alt="resistome-analysis pipeline: QC'd reads → ARG detection + hAMRonization → normalization → drug-class summary, diversity and differential abundance → output"/>
+</p>
+
 ```
 QC'd reads (host-removed) ─(ARG detection: RGI bwt/CARD · DeepARG · AMR++/MEGARes)→ ARG hits
    ─(hAMRonization: harmonize outputs)→ ─(normalize: RPKM + per-single-copy-gene / per-16S)→ ARG × samples
