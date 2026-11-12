@@ -2,31 +2,33 @@
 
 <sub>[← SciCo-Skills](../../README.md) · a skill in the SciCo-Skills suite</sub>
 
-Produce a **ready-to-paste image prompt** for a high-quality, **BioRender-style** scientific
-figure — a workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic.
-The primary output is a TEXT PROMPT (paste into FigureLabs / BioRender AI / any AI image tool);
-**optionally**, render it straight to an image with **Google "Nano Banana"** (Gemini image API).
+Draw a high-quality, **BioRender-style** scientific figure — a workflow, pipeline, mechanism,
+comparison, timeline, or multi-panel infographic — **directly in the VectorCraft desktop app**.
+The output is an editable vector file (`.vectorcraft` + SVG / PDF) and a PNG preview, with
+**real text labels** (nothing to re-type afterwards).
+
+> **Requires [VectorCraft](https://getartcraft.com/apps/vectorcraft)** — an open-source
+> (MIT OR Apache-2.0) desktop vector editor ([source](https://github.com/storytold/vectorcraft)).
+> Install it before using this skill; if it is missing, the skill stops and asks you to install it.
 
 > This is the *concept-figure* sibling of [`scientific-data-viz`](../scientific-data-viz):
 > use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot
 > real data.
 
 <p align="center">
-<img src="../../assets/scientific-workflow-viz-example.png" width="92%" alt="Example figure produced from a scientific-workflow-viz prompt — a BioRender-style scientific workflow infographic"/>
+<img src="../../assets/scientific-workflow-viz-example.png" width="92%" alt="Example figure drawn in VectorCraft by scientific-workflow-viz — a four-panel shotgun-metagenomics workflow: input, preprocessing, two profiling tracks, community analysis"/>
 </p>
 
-<p align="center"><sub>Example output — a figure rendered from a scientific-workflow-viz prompt.</sub></p>
+<p align="center"><sub>Example output — the shotgun-analysis pipeline, drawn in VectorCraft by this skill.</sub></p>
 
 ## 🤖 Use it in Claude
 
-**Describe the method or process** you want to visualize — Claude writes the ready-to-paste
-image prompt (and can render it if you provide a Nano Banana key). For example, just say:
+**Describe the method or process** you want to visualize — Claude designs the figure and draws
+it in VectorCraft. For example, just say:
 
 > *"Make a BioRender-style workflow figure for this pipeline."*
->
-> *"...and render it with Nano Banana"* (after you set `GEMINI_API_KEY`)
 
-The steps below are the method Claude follows to write that prompt.
+The steps below are the method Claude follows to design and draw the figure.
 
 ## The 5-step process
 
@@ -35,23 +37,23 @@ The steps below are the method Claude follows to write that prompt.
    cycle/loop · mechanism/network · hybrid (panel count follows the content — never forced to 3).
 3. **Set the components** — the concrete blocks and how they connect.
 4. **Choose the illustrations** — icons / mini-diagrams grounded in the real method.
-5. **Write the prompt** — assembled in the house style, in a plain code block.
+5. **Draw it in VectorCraft** — build it in the app, export a PNG, look at it, fix what is wrong,
+   and deliver the editable file with SVG / PDF / PNG.
 
 **House style:** flat scientific icons, white background, dark-grey text, soft color-coded
 sections with rounded borders / colored header bars, clear arrows, default 16:9.
 
-## Optional: render with Google Nano Banana
+**Arrows:** one thin dark-grey arrow style, one global reading direction, strictly horizontal
+or vertical, each box drawn exactly once.
 
-If you have a **Google Gemini API key**, render the prompt directly (stdlib-only helper,
-no install):
+## Requirement: VectorCraft
 
-```bash
-export GEMINI_API_KEY="your-key"        # from https://aistudio.google.com/apikey — never commit it
-python nano_banana.py --prompt-file prompt.txt --out figure.png --aspect 16:9
-```
+1. Install the desktop app from **<https://getartcraft.com/apps/vectorcraft>**.
+2. That is all — Claude starts its own VectorCraft window through the app's local control
+   server and sends drawing commands with the bundled `vectorcraft_control.py`
+   (standard library only, no install). It never attaches to a VectorCraft you already have open.
 
-Options: `--model` (default `gemini-2.5-flash-image`), `--aspect`, `--api-key`. The key is
-read from `GEMINI_API_KEY` / `GOOGLE_API_KEY` and never stored or printed. AI-generated
-images still garble text — **re-type labels/equations in PowerPoint** for a final figure.
+How the app is started and driven, and the commands used:
+**[`vectorcraft-runtime.md`](vectorcraft-runtime.md)** (checked against VectorCraft 0.21.0 on macOS).
 
 Full rules, the design menu, and examples: **[`SKILL.md`](SKILL.md)**.

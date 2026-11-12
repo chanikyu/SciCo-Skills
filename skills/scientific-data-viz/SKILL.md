@@ -11,7 +11,7 @@ code (matplotlib) that renders the exact values — never an AI image prompt.
 **Core principle:** The figure is CODE-RENDERED so the data is exact. An AI image
 generator fabricates bar heights, axes, and error bars; it must never touch real data.
 Sibling skill `scientific-workflow-viz` handles the opposite case (conceptual
-diagrams), and uses image prompts. This skill is for data.
+diagrams), and draws them in the VectorCraft app. This skill is for data.
 
 ## When to use
 
@@ -20,7 +20,7 @@ diagrams), and uses image prompts. This skill is for data.
 - Use when the message is "show these numbers," not "explain this concept."
 
 **When NOT to use:** conceptual workflow / pipeline / mechanism / comparison *diagrams*
-with no data behind them → use `scientific-workflow-viz` (image prompt) instead.
+with no data behind them → use `scientific-workflow-viz` (drawn in VectorCraft) instead.
 
 ## The iron rule — data values are exact
 
