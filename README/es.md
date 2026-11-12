@@ -27,24 +27,87 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 
 ## 📦 Skills
 
-| Skill | Qué hace |
+<!-- STRUCTURE IS FIXED - do not change it.
+     Skills are grouped into collapsed <details> toggles: the same groups, sub-headings and order as the
+     wiki Home page. To add a skill, add ONE table row inside the matching toggle, here and in the wiki Home.
+     Never flatten this into a single table, and never drop the toggles. -->
+
+<details>
+<summary><b>Microbioma — comunidad</b></summary>
+
+**Metagenoma (ADN)**
+
+| Habilidad | Qué hace |
 |---|---|
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | Pipeline de microbioma 16S/ITS — FASTQ (DADA2) o tabla de features → preprocesado → diversidad alfa y beta (distancia, PCoA, PERMANOVA) → abundancia diferencial — con figuras de revista. Entra en cualquier etapa; basado en scikit-bio; reutiliza scientific-data-viz. |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | Metagenómica shotgun — QC + eliminación del hospedador → perfilado basado en lecturas (MetaPhlAn / Kraken2+Bracken, HUMAnN) o MAGs basados en ensamblaje (MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → diversidad y abundancia diferencial. Reutiliza el núcleo de amplicon-analysis. |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | Viroma / fagos a partir de un metagenoma — identificación viral con geNomad → QC con CheckV → vOTUs (95% ANI/85% AF) → abundancia con CoverM (amplitud de cobertura ≥75%) → diversidad y abundancia diferencial. Reutiliza el núcleo de amplicon-analysis; se apoya en el ensamblaje de shotgun. |
 | 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | Resistoma / AMR de comunidad a partir de las lecturas de un metagenoma — detección de ARG (RGI/CARD, DeepARG, AMR++/MEGARes) → hAMRonization → normalización (RPKM + por célula) → agregación por clase de fármaco → ARG × muestras → diversidad y diferencial. Reutiliza el núcleo de amplicon-analysis (frente a amr-profiling para un único aislado). |
 | 🧭 [strain-tracking](https://github.com/chanikyu/SciCo-Skills/wiki/strain-tracking) | Seguimiento de cepas a lo largo de una cohorte de metagenomas — compartición / transmisión / persistencia de una misma cepa: perfilado por muestra (StrainPhlAn 4; inStrain popANI ≥99.999%) → matrices de distancia de cepas por especie → una red de compartición + persistencia longitudinal. Para una cohorte de metagenomas (frente a strain-typing para un único aislado). |
+
+**Metatranscriptoma (ARN)**
+
+| Habilidad | Qué hace |
+|---|---|
+| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | RNA-seq de comunidad — QC + eliminación del hospedador → eliminación de rRNA (SortMeRNA) → perfilado funcional (HUMAnN) y taxonómico (MetaPhlAn) de la comunidad activa → diversidad y abundancia diferencial. Reutiliza el núcleo de shotgun + amplicon. |
+
+**Metaboloma**
+
+| Habilidad | Qué hace |
+|---|---|
+| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | Metabolómica a partir de una tabla de features anotada — filtrado/imputación → PQN → log+Pareto → univariante (BH-FDR, volcano) → PCA / PLS-DA + VIP + permutación → heatmap; ORA de rutas opcional. |
+
+**Integración multiómica**
+
+| Habilidad | Qué hace |
+|---|---|
+| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | Integra metagenoma + metatranscriptoma + metaboloma emparejados — CLR/log por ómica → PERMANOVA → red de Spearman inter-ómica (BH-FDR) → concordancia por Procrustes/Mantel; MOFA+ opcional. |
+
+</details>
+
+<details>
+<summary><b>Aislado — organismo único</b></summary>
+
+**Genoma (ADN)**
+
+| Habilidad | Qué hace |
+|---|---|
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | Backbone de genoma de aislado bacteriano — FASTQ o contigs → QC → ensamblaje (SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → QC del ensamblaje (QUAST, CheckM2) → anotación (Bakta/Prokka) → identificación de especie (GTDB-Tk/ANI). Entra en cualquier etapa. |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | Tipificación de cepas de genomas ensamblados — tipo de secuencia MLST (mlst), serotipado opcional (SISTR/ECTyper) y cgMLST (chewBBACA). |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | Cribado de genomas ensamblados para genes de AMR, factores de virulencia y replicones de plásmidos — AMRFinderPlus + abricate (CARD/ResFinder, VFDB, PlasmidFinder). |
+
+**Transcriptoma (ARN)**
+
+| Habilidad | Qué hace |
+|---|---|
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | RNA-seq masivo (bulk) — FASTQ o matriz de conteos → QC → cuantificación (Salmon/kallisto/STAR vía --aligner) → expresión diferencial (pydeseq2) → enriquecimiento, con PCA / volcano / heatmap. Entra en cualquier etapa. |
+
+**Metaboloma (metabolitos)**
+
+| Habilidad | Qué hace |
+|---|---|
 | ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | Metabolómica upstream — LC-MS/GC-MS crudo (mzML/.CDF) → detección de features (asari/XCMS · eRah/MS-DIAL) → alineamiento → QC (RSD, deriva QC-RLSC) → anotación (matchms, niveles MSI) → tabla de features anotada. Pasa el testigo a microbiome-metabolome-analysis. |
-| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | RNA-seq de comunidad — QC + eliminación del hospedador → eliminación de rRNA (SortMeRNA) → perfilado funcional (HUMAnN) y taxonómico (MetaPhlAn) de la comunidad activa → diversidad y abundancia diferencial. Reutiliza el núcleo de shotgun + amplicon. |
-| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | Metabolómica a partir de una tabla de features anotada — filtrado/imputación → PQN → log+Pareto → univariante (BH-FDR, volcano) → PCA / PLS-DA + VIP + permutación → heatmap; ORA de rutas opcional. |
-| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | Integra metagenoma + metatranscriptoma + metaboloma emparejados — CLR/log por ómica → PERMANOVA → red de Spearman inter-ómica (BH-FDR) → concordancia por Procrustes/Mantel; MOFA+ opcional. |
+
+</details>
+
+<details>
+<summary><b>Visualización</b></summary>
+
+| Habilidad | Qué hace |
+|---|---|
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Figuras de revista con calidad de publicación a partir de datos reales — renderizadas por código, de modo que cada valor es exacto. 20 paletas, leyendas fuera del gráfico, estadísticas opcionales (t / ANOVA / Mann–Whitney / Kruskal / correlación / log-rank / **PERMANOVA**), salida estructurada en `images/` + `script/`. |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | **Figuras conceptuales** de alta calidad estilo BioRender (flujo de trabajo / mecanismo / comparación), **dibujadas en la aplicación de escritorio [VectorCraft](https://getartcraft.com/apps/vectorcraft)** (**obligatoria**) y entregadas en **PDF + SVG + PNG**, con etiquetas de texto reales. |
+
+</details>
+
+<details>
+<summary><b>Construcción de herramientas</b></summary>
+
+| Habilidad | Qué hace |
+|---|---|
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | Construye de forma autónoma una nueva herramienta bioinformática a partir de un objetivo de investigación — estudio profundo de artículos/herramientas → diseño de algoritmo → viabilidad → benchmark honesto frente a los competidores reales (más cerca de la verdad), aislado en conda, revisión de dos lentes, CLI de baja fricción. Informa solo en 4 gates. |
+
+</details>
 
 ## 🚀 Inicio rápido
 

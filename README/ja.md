@@ -27,24 +27,87 @@
 
 ## 📦 Skills
 
-| Skill | 機能 |
+<!-- STRUCTURE IS FIXED - do not change it.
+     Skills are grouped into collapsed <details> toggles: the same groups, sub-headings and order as the
+     wiki Home page. To add a skill, add ONE table row inside the matching toggle, here and in the wiki Home.
+     Never flatten this into a single table, and never drop the toggles. -->
+
+<details>
+<summary><b>マイクロバイオーム — 群集</b></summary>
+
+**メタゲノム（DNA）**
+
+| スキル | 機能 |
 |---|---|
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS マイクロバイオームパイプライン — FASTQ(DADA2)または feature table → 前処理 → α・β多様性(距離, PCoA, PERMANOVA) → 差次的存在量 — ジャーナル図まで。任意のステージから開始可能; scikit-bio ベース; scientific-data-viz を再利用。 |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | ショットガンメタゲノミクス — QC + 宿主除去 → リードベースのプロファイリング(MetaPhlAn / Kraken2+Bracken, HUMAnN)またはアセンブリベースの MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 多様性 & 差次的存在量。amplicon-analysis のコアを再利用。 |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | メタゲノムからのウイルス叢／ファージ — geNomad によるウイルス同定 → CheckV QC → vOTUs(95% ANI/85% AF) → CoverM 存在量(breadth ≥75%) → 多様性 & 差次的存在量。amplicon-analysis のコアを再利用し、shotgun のアセンブリを土台にする。 |
 | 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | メタゲノムのリードから得るレジストーム／群集の AMR — ARG 検出(RGI/CARD, DeepARG, AMR++/MEGARes) → hAMRonization → 正規化(RPKM + per-cell) → 薬剤クラスへの集約 → ARG × サンプル → 多様性・示差解析。amplicon-analysis のコアを再利用(単一分離株向けの amr-profiling とは対照的)。 |
 | 🧭 [strain-tracking](https://github.com/chanikyu/SciCo-Skills/wiki/strain-tracking) | メタゲノムのコホートにわたる株トラッキング — 同一株の共有／伝播／持続性: サンプルごとのプロファイリング(StrainPhlAn 4; inStrain popANI ≥99.999%) → 菌種ごとの株距離行列 → 共有ネットワーク + 経時的な持続性。メタゲノムのコホート向け(単一分離株向けの strain-typing とは対照的)。 |
+
+**メタトランスクリプトーム（RNA）**
+
+| スキル | 機能 |
+|---|---|
+| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群集 RNA-seq — QC + 宿主除去 → rRNA除去(SortMeRNA) → 機能(HUMAnN)・分類(MetaPhlAn)プロファイリング(活性群集) → 多様性 & 差次的存在量。shotgun+amplicon のコアを再利用。 |
+
+**メタボローム（Metabolome）**
+
+| スキル | 機能 |
+|---|---|
+| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | アノテーション済み feature table からのメタボロミクス — フィルタリング/欠測値補完 → PQN → log+Pareto → 単変量解析(BH-FDR, volcano) → PCA / PLS-DA + VIP + 並べ替え検定 → ヒートマップ; オプションでパスウェイ ORA。 |
+
+**マルチオミクス統合（Multi-omics integration）**
+
+| スキル | 機能 |
+|---|---|
+| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | ペアリングされたメタゲノム + メタトランスクリプトーム + メタボロームを統合 — オミクスごとの CLR/log → PERMANOVA → オミクス間 Spearman ネットワーク(BH-FDR) → Procrustes/Mantel 一致性; オプションで MOFA+。 |
+
+</details>
+
+<details>
+<summary><b>分離株 — 単一生物</b></summary>
+
+**ゲノム（DNA）**
+
+| スキル | 機能 |
+|---|---|
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 細菌分離株ゲノムのバックボーン — FASTQ または contigs → QC → アセンブリ(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → アセンブリQC(QUAST, CheckM2) → アノテーション(Bakta/Prokka) → 菌種同定(GTDB-Tk/ANI)。任意のステージから開始可能。 |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | アセンブリゲノムの株タイピング — MLST sequence type(mlst)、オプションで serotyping(SISTR/ECTyper)と cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | アセンブリゲノムから AMR遺伝子・ビルレンス因子・プラスミドレプリコンをスクリーニング — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
+
+**トランスクリプトーム（RNA）**
+
+| スキル | 機能 |
+|---|---|
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | バルク RNA-seq — FASTQ または count matrix → QC → 定量(Salmon/kallisto/STAR、--aligner) → 差次的発現(pydeseq2) → エンリッチメント、PCA/volcano/heatmap。任意のステージから開始可能。 |
+
+**メタボローム（代謝物）**
+
+| スキル | 機能 |
+|---|---|
 | ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | メタボロミクスのアップストリーム — raw LC-MS/GC-MS（mzML/.CDF）→ 特徴量検出（asari/XCMS · eRah/MS-DIAL）→ アライメント → QC（RSD、QC-RLSC ドリフト）→ アノテーション（matchms、MSI レベル）→ アノテーション済み feature table。microbiome-metabolome-analysis へ引き渡す。 |
-| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群集 RNA-seq — QC + 宿主除去 → rRNA除去(SortMeRNA) → 機能(HUMAnN)・分類(MetaPhlAn)プロファイリング(活性群集) → 多様性 & 差次的存在量。shotgun+amplicon のコアを再利用。 |
-| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | アノテーション済み feature table からのメタボロミクス — フィルタリング/欠測値補完 → PQN → log+Pareto → 単変量解析(BH-FDR, volcano) → PCA / PLS-DA + VIP + 並べ替え検定 → ヒートマップ; オプションでパスウェイ ORA。 |
-| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | ペアリングされたメタゲノム + メタトランスクリプトーム + メタボロームを統合 — オミクスごとの CLR/log → PERMANOVA → オミクス間 Spearman ネットワーク(BH-FDR) → Procrustes/Mantel 一致性; オプションで MOFA+。 |
+
+</details>
+
+<details>
+<summary><b>可視化</b></summary>
+
+| スキル | 機能 |
+|---|---|
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 種類のパレット、凡例を図の外側に配置、任意の統計処理（t 検定 / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの高品質な **コンセプト図**（ワークフロー / メカニズム / 比較）を [VectorCraft](https://getartcraft.com/apps/vectorcraft) デスクトップアプリ（**インストール必須**）で**直接描画**し、**PDF・SVG・PNG** の 3 ファイルで納品。テキストラベルは正確です。 |
+
+</details>
+
+<details>
+<summary><b>ツール構築</b></summary>
+
+| スキル | 機能 |
+|---|---|
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 研究目標から新しいバイオインフォマティクスツールを自律的に構築 — 論文・ツールの深い調査 → アルゴリズム設計 → 実現可能性 → 実際の競合ツールとの正直なベンチマーク(真の値により近く)、conda隔離、2レンズレビュー、低摩擦CLI。4つのゲートでのみ報告。 |
+
+</details>
 
 ## 🚀 Quick start
 

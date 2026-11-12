@@ -27,24 +27,87 @@
 
 ## 📦 Skills
 
-| Skill | 功能说明 |
+<!-- STRUCTURE IS FIXED - do not change it.
+     Skills are grouped into collapsed <details> toggles: the same groups, sub-headings and order as the
+     wiki Home page. To add a skill, add ONE table row inside the matching toggle, here and in the wiki Home.
+     Never flatten this into a single table, and never drop the toggles. -->
+
+<details>
+<summary><b>微生物组 —— 群落</b></summary>
+
+**宏基因组（DNA）**
+
+| 技能 | 功能 |
 |---|---|
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS 微生物组流程 — FASTQ(DADA2)或 feature table → 预处理 → α 与 β 多样性(距离, PCoA, PERMANOVA) → 差异丰度 — 生成期刊图。可从任意阶段进入; 基于 scikit-bio; 复用 scientific-data-viz。 |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | 鸟枪法宏基因组 — QC + 宿主去除 → 基于读长的分析(MetaPhlAn / Kraken2+Bracken, HUMAnN)或基于组装的 MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 多样性 & 差异丰度。复用 amplicon-analysis 核心。 |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | 从宏基因组中恢复病毒组 / 噬菌体 — geNomad 病毒鉴定 → CheckV 质控 → vOTUs(95% ANI/85% AF) → CoverM 丰度(广度 ≥75%) → 多样性 & 差异丰度。复用 amplicon-analysis 核心; 基于 shotgun 组装。 |
 | 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | 从宏基因组读长中分析抗性组 / 群落 AMR — ARG 检测(RGI/CARD、DeepARG、AMR++/MEGARes) → hAMRonization → 归一化(RPKM + 每细胞) → 按药物类别汇总 → ARG × 样本 → 多样性 & 差异分析。复用 amplicon-analysis 核心(与针对单一分离株的 amr-profiling 相对)。 |
 | 🧭 [strain-tracking](https://github.com/chanikyu/SciCo-Skills/wiki/strain-tracking) | 在宏基因组队列中追踪菌株 —— 同株共享 / 传播 / 持留：逐样本分型（StrainPhlAn 4；inStrain popANI ≥99.999%）→ 各物种菌株距离矩阵 → 共享网络 + 纵向持留。面向宏基因组队列（与针对单一分离株的 strain-typing 相对）。 |
+
+**宏转录组（RNA）**
+
+| 技能 | 功能 |
+|---|---|
+| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群落 RNA-seq — QC + 宿主去除 → rRNA 去除(SortMeRNA) → 功能(HUMAnN)与分类(MetaPhlAn)分析(活性群落) → 多样性 & 差异丰度。复用 shotgun + amplicon 核心。 |
+
+**代谢组**
+
+| 技能 | 功能 |
+|---|---|
+| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 从已注释特征表出发的代谢组学 — 过滤/插补 → PQN → log+Pareto → 单变量(BH-FDR, 火山图) → PCA / PLS-DA + VIP + 置换检验 → 热图; 可选通路 ORA。 |
+
+**多组学整合**
+
+| 技能 | 功能 |
+|---|---|
+| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 整合配对的宏基因组 + 宏转录组 + 代谢组 — 各组学 CLR/log → PERMANOVA → 跨组学 Spearman 网络(BH-FDR) → Procrustes/Mantel 一致性; 可选 MOFA+。 |
+
+</details>
+
+<details>
+<summary><b>分离株 —— 单一生物</b></summary>
+
+**基因组（DNA）**
+
+| 技能 | 功能 |
+|---|---|
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 细菌分离株基因组主流程 — FASTQ 或 contigs → QC → 组装(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → 组装质控(QUAST, CheckM2) → 注释(Bakta/Prokka) → 物种鉴定(GTDB-Tk/ANI)。可从任意阶段进入。 |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | 组装基因组的菌株分型 — MLST sequence type(mlst),可选 serotyping(SISTR/ECTyper)与 cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | 在组装基因组中筛查 AMR 基因、毒力因子与质粒 replicon — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
+
+**转录组（RNA）**
+
+| 技能 | 功能 |
+|---|---|
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | 批量 RNA-seq — FASTQ 或 count matrix → QC → 定量(Salmon/kallisto/STAR，--aligner) → 差异表达(pydeseq2) → 富集分析，含 PCA/volcano/heatmap。可从任意阶段进入。 |
-| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群落 RNA-seq — QC + 宿主去除 → rRNA 去除(SortMeRNA) → 功能(HUMAnN)与分类(MetaPhlAn)分析(活性群落) → 多样性 & 差异丰度。复用 shotgun + amplicon 核心。 |
+
+**代谢组（代谢物）**
+
+| 技能 | 功能 |
+|---|---|
 | ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | 代谢组学上游 — 原始 LC-MS/GC-MS(mzML/.CDF) → 特征检测(asari/XCMS · eRah/MS-DIAL) → 对齐 → 质控(RSD, QC-RLSC 漂移) → 注释(matchms, MSI 级别) → 已注释特征表。衔接至 microbiome-metabolome-analysis。 |
-| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 从已注释特征表出发的代谢组学 — 过滤/插补 → PQN → log+Pareto → 单变量(BH-FDR, 火山图) → PCA / PLS-DA + VIP + 置换检验 → 热图; 可选通路 ORA。 |
-| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 整合配对的宏基因组 + 宏转录组 + 代谢组 — 各组学 CLR/log → PERMANOVA → 跨组学 Spearman 网络(BH-FDR) → Procrustes/Mantel 一致性; 可选 MOFA+。 |
+
+</details>
+
+<details>
+<summary><b>可视化</b></summary>
+
+| 技能 | 功能 |
+|---|---|
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` + `script/`。 |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | 高质量的 BioRender 风格**概念图**（工作流 / 机制 / 对比），在 [VectorCraft](https://getartcraft.com/apps/vectorcraft) 桌面应用（**必须安装**）中**直接绘制**，并以 **PDF + SVG + PNG** 三个文件交付，文字标签准确。 |
+
+</details>
+
+<details>
+<summary><b>工具构建</b></summary>
+
+| 技能 | 功能 |
+|---|---|
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 从研究目标自主构建新的生物信息学工具 — 论文/工具深度调研 → 算法设计 → 可行性 → 与真实竞争工具的诚实基准测试(更接近真实值)、conda 隔离、双镜头评审、低摩擦 CLI。仅在 4 个关卡报告。 |
+
+</details>
 
 ## 🚀 快速开始
 
