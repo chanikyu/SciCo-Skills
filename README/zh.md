@@ -43,7 +43,7 @@
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 从已注释特征表出发的代谢组学 — 过滤/插补 → PQN → log+Pareto → 单变量(BH-FDR, 火山图) → PCA / PLS-DA + VIP + 置换检验 → 热图; 可选通路 ORA。 |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 整合配对的宏基因组 + 宏转录组 + 代谢组 — 各组学 CLR/log → PERMANOVA → 跨组学 Spearman 网络(BH-FDR) → Procrustes/Mantel 一致性; 可选 MOFA+。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` + `script/`。 |
-| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender 风格的**概念图**（工作流 / 机制 / 对比），在 [VectorCraft](https://getartcraft.com/apps/vectorcraft) 桌面应用（**必须安装**）中直接绘制为**可编辑的矢量文件**——文字标签准确，可导出 SVG / PDF / PNG。 |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | 高质量的 BioRender 风格**概念图**（工作流 / 机制 / 对比），在 [VectorCraft](https://getartcraft.com/apps/vectorcraft) 桌面应用（**必须安装**）中**直接绘制**，并以 **PDF + SVG + PNG** 三个文件交付，文字标签准确。 |
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 从研究目标自主构建新的生物信息学工具 — 论文/工具深度调研 → 算法设计 → 可行性 → 与真实竞争工具的诚实基准测试(更接近真实值)、conda 隔离、双镜头评审、低摩擦 CLI。仅在 4 个关卡报告。 |
 
 ## 🚀 快速开始

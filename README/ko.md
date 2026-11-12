@@ -43,7 +43,7 @@
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 주석된 피처 테이블에서 시작하는 메타볼로믹스 — 필터링/대치 → PQN → log+Pareto → 단변량(BH-FDR, 볼케이노) → PCA / PLS-DA + VIP + 순열검정 → 히트맵; 선택적 경로 ORA. |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 짝지어진 메타지놈 + 메타전사체 + 메타볼롬 통합 — 오믹스별 CLR/log → PERMANOVA → 오믹스 간 Spearman 네트워크(BH-FDR) → Procrustes/Mantel 일치도; 선택적 MOFA+. |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 실제 데이터로 만드는 논문 품질의 저널 그림 — 코드로 렌더링되어 모든 값이 정확합니다. 20종 팔레트, 범례 바깥 배치, 선택적 통계(t / ANOVA / Mann–Whitney / Kruskal / 상관 / log-rank / **PERMANOVA**), 체계적인 `images/` + `script/` 출력. |
-| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender 스타일의 **개념도**(워크플로우 / 메커니즘 / 비교)를 [VectorCraft](https://getartcraft.com/apps/vectorcraft) 데스크톱 앱(**설치 필수**)에서 **편집 가능한 벡터 파일**로 직접 그림 — 정확한 글자 라벨, SVG / PDF / PNG 내보내기. |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender 스타일의 고품질 **개념도**(워크플로우 / 메커니즘 / 비교)를 [VectorCraft](https://getartcraft.com/apps/vectorcraft) 데스크톱 앱(**설치 필수**)으로 **직접 그려** **PDF · SVG · PNG** 세 파일로 제공 — 글자 라벨이 정확함. |
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 연구 목표로부터 새 생물정보 도구를 자동으로 개발 — 논문·도구 심층 조사 → 알고리즘 설계 → 타당성 → 실제 경쟁툴 대비 정직한 벤치마크(정답에 더 가깝게), conda 격리, 2렌즈 리뷰, 저마찰 CLI. 4개 게이트에서만 보고. |
 
 ## 🚀 Quick start

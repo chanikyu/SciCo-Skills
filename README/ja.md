@@ -43,7 +43,7 @@
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | アノテーション済み feature table からのメタボロミクス — フィルタリング/欠測値補完 → PQN → log+Pareto → 単変量解析(BH-FDR, volcano) → PCA / PLS-DA + VIP + 並べ替え検定 → ヒートマップ; オプションでパスウェイ ORA。 |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | ペアリングされたメタゲノム + メタトランスクリプトーム + メタボロームを統合 — オミクスごとの CLR/log → PERMANOVA → オミクス間 Spearman ネットワーク(BH-FDR) → Procrustes/Mantel 一致性; オプションで MOFA+。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 種類のパレット、凡例を図の外側に配置、任意の統計処理（t 検定 / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
-| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの **コンセプト図**（ワークフロー / メカニズム / 比較）を、[VectorCraft](https://getartcraft.com/apps/vectorcraft) デスクトップアプリ（**インストール必須**）で**編集可能なベクターファイル**として直接描画。正確なテキストラベル、SVG / PDF / PNG 書き出しに対応。 |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの高品質な **コンセプト図**（ワークフロー / メカニズム / 比較）を [VectorCraft](https://getartcraft.com/apps/vectorcraft) デスクトップアプリ（**インストール必須**）で**直接描画**し、**PDF・SVG・PNG** の 3 ファイルで納品。テキストラベルは正確です。 |
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 研究目標から新しいバイオインフォマティクスツールを自律的に構築 — 論文・ツールの深い調査 → アルゴリズム設計 → 実現可能性 → 実際の競合ツールとの正直なベンチマーク(真の値により近く)、conda隔離、2レンズレビュー、低摩擦CLI。4つのゲートでのみ報告。 |
 
 ## 🚀 Quick start

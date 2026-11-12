@@ -1,11 +1,11 @@
 ---
 name: scientific-workflow-viz
-description: 'Use when the user wants a high-quality BioRender-style scientific figure — workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic — DRAWN as an editable vector file in the VectorCraft desktop app (REQUIRED; install from https://getartcraft.com/apps/vectorcraft), with exact real-text labels and SVG/PDF/PNG export. Follows a 5-step process (analyze the content → choose the design → set the components → choose the illustrations → draw it in VectorCraft) with a FLEXIBLE layout (any number of panels/steps/stages; default 16:9). Triggers — "워크플로우 그림", "scheme/pipeline/mechanism figure", "BioRender 스타일", or "scientific workflow infographic". Invoke when the user asks to visualize a method/process/comparison as a figure.'
+description: 'Use when the user wants a high-quality BioRender-style scientific figure — workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic — DRAWN in the VectorCraft desktop app (REQUIRED; install from https://getartcraft.com/apps/vectorcraft) as a high-quality scientific illustration with exact real-text labels, and DELIVERED AS THREE FILES: PDF, SVG and PNG. Follows a 5-step process (analyze the content → choose the design → set the components → choose the illustrations → draw it in VectorCraft) with a FLEXIBLE layout (any number of panels/steps/stages; default 16:9). Triggers — "워크플로우 그림", "scheme/pipeline/mechanism figure", "BioRender 스타일", or "scientific workflow infographic". Invoke when the user asks to visualize a method/process/comparison as a figure.'
 ---
 
 # Scientific Workflow Viz
 
-Draw a high-quality, BioRender-style scientific figure **directly in the VectorCraft desktop app** — an editable vector file with real text labels, not an AI-generated image. Steps 1–4 design the figure; step 5 draws it, looks at the render, and fixes it.
+Draw a high-quality, BioRender-style scientific illustration **directly in the VectorCraft desktop app** and deliver it as **three files: PDF, SVG and PNG**. Labels are real text, not an AI-generated image. Steps 1–4 design the figure; step 5 draws it, looks at the render, fixes it, and exports the three files.
 
 **Requirement — VectorCraft must be installed:** <https://getartcraft.com/apps/vectorcraft> (source: <https://github.com/storytold/vectorcraft>). Check this before step 1. If the app is missing, **stop and ask the user to install it from that link** — do not fall back to an image prompt or another renderer, and do not install it yourself.
 
@@ -17,7 +17,7 @@ The layout is **flexible** — do NOT force a fixed 3-panel structure. Choose th
 2. **Decide the design type.** Pick the layout that matches the content (see the menu below). The number of panels / steps / stages is whatever the content needs — 2, 3, 4, a cycle, columns, levels, etc. Do not default to 3 panels.
 3. **Set the components.** Decide the concrete blocks: how many panels/steps/stages, what each one is, and how they connect (arrows, increasing scope, side-by-side, loop…).
 4. **Choose the illustrations.** For each component, decide the icons / mini-diagrams (microbe cluster, abundance bar chart, DNA helix, molecule, gut-lining, matrix grid, network, table, gauge, etc.). Ground them in the real content.
-5. **Draw it in VectorCraft.** Build steps 2–4 in the app with the house style and the arrow rules, export a PNG, look at it, and fix what you see — details in "Step 5 in detail" below.
+5. **Draw it in VectorCraft.** Build steps 2–4 in the app with the house style, the quality bar and the arrow rules; export, look, fix; then deliver **PDF + SVG + PNG** — details in "Step 5 in detail" below.
 
 ## House style (always)
 
@@ -26,6 +26,30 @@ The layout is **flexible** — do NOT force a fixed 3-panel structure. Choose th
 - **Size:** **default 16:9** unless the user specifies otherwise (e.g. square, A4, poster).
 - **Color:** distinct soft color per section, used consistently. Use the deck's brand accent if part of one (e.g. `#4A90E2` for xMeta).
 - **Honesty:** ground in the real method; tag "(optional)" / "(proposed)"; don't invent stages.
+
+## Illustration quality — the bar to meet
+
+The result must read as a **high-quality scientific illustration**, not a box-and-arrow diagram.
+The reference figures are in this repo — open one and compare before you deliver:
+[scientific-workflow-viz-example.png](../../assets/scientific-workflow-viz-example.png),
+[amplicon_workflow.png](../../assets/amplicon_workflow.png),
+[shotgun-workflow.png](../../assets/shotgun-workflow.png).
+(If this skill folder was copied on its own, the same files are under
+<https://raw.githubusercontent.com/chanikyu/SciCo-Skills/main/assets/>.)
+
+- **Panels:** a colored border (about 3 pt), a saturated header band with a bold title, and a
+  `STAGE n` tab on the top edge. Fill the panel — large empty areas read as unfinished.
+- **Icons are illustrations:** every icon has an outline, a fill, and a second tone or highlight
+  (a tube with cap, liquid and graduations; a FASTQ page with a folded corner; a microbe with an
+  inner membrane). A bare rectangle or circle standing in for an object is not an icon.
+- **One visual system:** the same outline color and weight on every icon, a small fixed palette,
+  the same corner radius and chip shape everywhere.
+- **Type:** large and bold where it matters — title about 2.5 % of the canvas width, panel titles
+  about 1.5 %, labels about 1 %. Put tool names in rounded chips.
+- **Sub-structure:** split a dense panel into cards or tracks, each with its own colored header.
+- **Schematic charts** (box plot, ordination, volcano, stacked bars) are icons: no numbers and no
+  made-up statistics.
+- **Finish:** a one-line summary banner under the panels is welcome when it carries real information.
 
 ## Design menu (step 2 — pick what fits, not fixed)
 
@@ -90,10 +114,12 @@ skill folder.
    views, fix the biggest defect first, then re-export:
    - whole figure: main message, reading order, balance, empty or crowded areas;
    - final display size: export at the width it will be shown and confirm every label is readable;
-   - zoomed crops: clipped objects, overlaps, text touching borders, arrow start/end points.
-5. **Deliver** to the folder the user named (else a per-figure folder): the editable
-   `.vectorcraft` file, SVG, PDF, and a PNG preview. Say what you actually checked and what is
-   still unresolved — do not claim BioRender-equivalent quality.
+   - zoomed crops: clipped objects, overlaps, text touching borders, arrow start/end points;
+   - next to a reference figure ("Illustration quality"): if yours looks plainer, keep working.
+5. **Deliver exactly three files — PDF, SVG and PNG** — exported from VectorCraft with the same
+   base name, to the folder the user named (else a per-figure folder). Re-open the PDF or SVG
+   once and confirm it shows the same figure as the PNG. Say what you actually checked and what
+   is still unresolved.
 6. **Quit only the instance you started**, after saving (runtime file, section 5).
 
 ## Examples — figure specs from steps 2–4 (each is ONE design choice, not the only shape)

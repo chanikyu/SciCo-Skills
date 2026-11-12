@@ -76,17 +76,20 @@ Commands used to draw a complete workflow figure (0.21.0). Units are points; **y
 | Fill / stroke colour | `paint.setFill`, `paint.setStroke` | `ids`, `color: "#rrggbb"` or `none: true` |
 | Stroke weight, dash, arrowhead | `stroke.set` | `ids`, `weight`, `dash`, `endArrow: "Triangle"`, `arrowAlign: "tip"` |
 | Group and name | `object.group`, `object.setProps` | `ids` → `{id}`; then `name` |
-| Save the editable file | `document.save` | `path: "/absolute/output/figure.vectorcraft"` |
-| Export | `document.export` | `path`, `format: png\|svg\|pdf`; PNG takes `scale` (pixels per point), `background`, and `rect: [x, y, w, h]` for a zoomed crop |
+| Export the deliverables | `document.export` | `path`, `format: pdf\|svg\|png`; PNG takes `scale` (pixels per point), `background`, and `rect: [x, y, w, h]` for a zoomed crop |
+| Save the working file | `document.save` | `path: "/absolute/output/figure.vectorcraft"` — not a deliverable; saving lets the app quit cleanly |
+| Re-open an export to check it | `document.open` | `path` to the exported `.pdf` or `.svg`, then export a PNG of it and compare |
 
 `text.create` returns the text's `bounds` — compare them with the box the label must fit in to
 catch overflow before you even look. A `warning` in the reply means the font or style was not
 found and a fallback was used.
 
-## 4. Save, export, look
+## 4. Export the three files, then look
 
-Save the `.vectorcraft` file, export PNG / SVG / PDF, then **open the PNG and look at it**.
-A successful save or a valid SVG is not a visual check.
+The deliverable is **three files with the same base name: PDF, SVG and PNG**. Export all three
+with `document.export`, then **open the PNG and look at it**. A successful export or a valid SVG
+is not a visual check. Re-open the PDF or SVG once (`document.open`) and confirm it shows the
+same figure.
 
 ## 5. Timeouts and quitting
 

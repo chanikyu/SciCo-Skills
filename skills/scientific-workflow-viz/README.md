@@ -2,10 +2,9 @@
 
 <sub>[← SciCo-Skills](../../README.md) · a skill in the SciCo-Skills suite</sub>
 
-Draw a high-quality, **BioRender-style** scientific figure — a workflow, pipeline, mechanism,
+Draw a high-quality, **BioRender-style** scientific illustration — a workflow, pipeline, mechanism,
 comparison, timeline, or multi-panel infographic — **directly in the VectorCraft desktop app**.
-The output is an editable vector file (`.vectorcraft` + SVG / PDF) and a PNG preview, with
-**real text labels** (nothing to re-type afterwards).
+You get **three files: PDF, SVG and PNG**, with real text labels (nothing to re-type afterwards).
 
 > **Requires [VectorCraft](https://getartcraft.com/apps/vectorcraft)** — an open-source
 > (MIT OR Apache-2.0) desktop vector editor ([source](https://github.com/storytold/vectorcraft)).
@@ -16,19 +15,19 @@ The output is an editable vector file (`.vectorcraft` + SVG / PDF) and a PNG pre
 > real data.
 
 <p align="center">
-<img src="../../assets/scientific-workflow-viz-example.png" width="92%" alt="Example figure drawn in VectorCraft by scientific-workflow-viz — a four-panel shotgun-metagenomics workflow: input, preprocessing, two profiling tracks, community analysis"/>
+<img src="../../assets/scientific-workflow-viz-example.png" width="92%" alt="Example figure drawn in VectorCraft by scientific-workflow-viz — a four-stage shotgun-metagenomics workflow: input, preprocessing, two profiling tracks, community analysis"/>
 </p>
 
 <p align="center"><sub>Example output — the shotgun-analysis pipeline, drawn in VectorCraft by this skill.</sub></p>
 
 ## 🤖 Use it in Claude
 
-**Describe the method or process** you want to visualize — Claude designs the figure and draws
-it in VectorCraft. For example, just say:
+**Describe the method or process** you want to visualize — Claude designs the figure, draws it
+in VectorCraft, and hands you the PDF, SVG and PNG. For example, just say:
 
 > *"Make a BioRender-style workflow figure for this pipeline."*
 
-The steps below are the method Claude follows to design and draw the figure.
+The steps below are the method Claude follows.
 
 ## The 5-step process
 
@@ -37,11 +36,16 @@ The steps below are the method Claude follows to design and draw the figure.
    cycle/loop · mechanism/network · hybrid (panel count follows the content — never forced to 3).
 3. **Set the components** — the concrete blocks and how they connect.
 4. **Choose the illustrations** — icons / mini-diagrams grounded in the real method.
-5. **Draw it in VectorCraft** — build it in the app, export a PNG, look at it, fix what is wrong,
-   and deliver the editable file with SVG / PDF / PNG.
+5. **Draw it in VectorCraft** — build it in the app, export, look at the render, fix what is
+   wrong, and deliver **PDF + SVG + PNG**.
 
 **House style:** flat scientific icons, white background, dark-grey text, soft color-coded
 sections with rounded borders / colored header bars, clear arrows, default 16:9.
+
+**Illustration quality:** stage tabs and saturated header bands, outlined two-tone icons, tool
+names in chips, large bold type, panels filled with content — measured against the workflow
+figures in this repo ([this example](../../assets/scientific-workflow-viz-example.png),
+[amplicon](../../assets/amplicon_workflow.png), [shotgun](../../assets/shotgun-workflow.png)).
 
 **Arrows:** one thin dark-grey arrow style, one global reading direction, strictly horizontal
 or vertical, each box drawn exactly once.
@@ -56,4 +60,4 @@ or vertical, each box drawn exactly once.
 How the app is started and driven, and the commands used:
 **[`vectorcraft-runtime.md`](vectorcraft-runtime.md)** (checked against VectorCraft 0.21.0 on macOS).
 
-Full rules, the design menu, and examples: **[`SKILL.md`](SKILL.md)**.
+Full rules, the quality bar, the design menu, and examples: **[`SKILL.md`](SKILL.md)**.
